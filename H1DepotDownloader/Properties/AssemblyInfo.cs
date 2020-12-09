@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("H1DepotDownloader")]
-[assembly: AssemblyCopyright("Copyright © 2020 H1DepotDownloader")]
+[assembly: AssemblyCopyright("Copyright © 2020 H1emu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
