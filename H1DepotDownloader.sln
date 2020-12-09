@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H1Emu", "H1Emu\H1Emu.csproj", "{A4BD85D9-2524-43EC-92A4-57D1E6546F04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H1DepotDownloader", "H1DepotDownloader\H1DepotDownloader.csproj", "{A4BD85D9-2524-43EC-92A4-57D1E6546F04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
