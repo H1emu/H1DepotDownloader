@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     static class Util
     {

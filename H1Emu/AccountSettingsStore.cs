@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     [ProtoContract]
     class AccountSettingsStore

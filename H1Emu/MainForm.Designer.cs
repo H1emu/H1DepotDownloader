@@ -1,4 +1,4 @@
-﻿namespace H1Emu
+﻿namespace H1DepotDownloader
 {
     partial class MainForm
     {
@@ -145,7 +145,7 @@
             this.Controls.Add(this.startDownloadBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "H1Emu - Build Depot";
+            this.Text = "H1DepotDownloader by H1emu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

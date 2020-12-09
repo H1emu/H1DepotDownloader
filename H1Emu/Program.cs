@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     
     static class Program

@@ -3,7 +3,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     public class TextBoxStreamWriter : TextWriter
     {

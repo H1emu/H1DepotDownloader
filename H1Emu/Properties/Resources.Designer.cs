@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace H1Emu.Properties
+namespace H1DepotDownloader.Properties
 {
 
 

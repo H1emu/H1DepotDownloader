@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
 
     class Steam3Session

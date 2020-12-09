@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A4BD85D9-2524-43EC-92A4-57D1E6546F04}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>H1Emu</RootNamespace>
-    <AssemblyName>H1Emu</AssemblyName>
+    <RootNamespace>H1DepotDownloader</RootNamespace>
+    <AssemblyName>H1DepotDownloader</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

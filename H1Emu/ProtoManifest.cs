@@ -6,7 +6,7 @@ using System.IO.Compression;
 using ProtoBuf;
 using SteamKit2;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     [ProtoContract()]
     class ProtoManifest

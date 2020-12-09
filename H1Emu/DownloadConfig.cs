@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     class DownloadConfig
     {

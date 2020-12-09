@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("H1Emu")]
+[assembly: AssemblyTitle("H1DepotDownloader")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("H1Emu")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyProduct("H1DepotDownloader")]
+[assembly: AssemblyCopyright("Copyright © 2020 H1emu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

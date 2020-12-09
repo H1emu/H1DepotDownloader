@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     /// <summary>
     /// CDNClientPool provides a pool of connections to CDN endpoints, requesting CDN tokens as needed

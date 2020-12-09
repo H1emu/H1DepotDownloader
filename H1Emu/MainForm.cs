@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace H1Emu
+namespace H1DepotDownloader
 {
     public partial class MainForm : Form
     {
