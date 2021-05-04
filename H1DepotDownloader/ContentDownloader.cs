@@ -32,7 +32,7 @@ namespace H1DepotDownloader
         private static Steam3Session.Credentials steam3Credentials;
         private static CDNClientPool cdnPool;
 
-        private static string DEFAULT_DOWNLOAD_DIR = "depots";
+        public static string DEFAULT_DOWNLOAD_DIR = "depots";
         private static string CONFIG_DIR = "DepotDownloader";
         private static string STAGING_DIR = Path.Combine(CONFIG_DIR, "staging");
 

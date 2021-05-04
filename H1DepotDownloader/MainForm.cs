@@ -1,10 +1,13 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,7 +16,7 @@ using System.Windows.Forms;
 
 namespace H1DepotDownloader
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
 
         TextWriter _writer = null;
@@ -21,18 +24,25 @@ namespace H1DepotDownloader
         public MainForm()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Grey800, Primary.Grey900, Primary.BlueGrey500, Accent.Red100, TextShade.WHITE);
+            materialSkinManager.AddFormToManage(this);
+
             _writer = new TextBoxStreamWriter(consoleLogs);
             Console.SetOut(_writer);
         }
 
-        private void startDownloadBtn_Click(object sender, EventArgs e)
+        private void startDownloadBtn_Click_1(object sender, EventArgs e)
         {
+            if (usernameText.Text == "" || passwordText.Text == "") { MessageBox.Show("Please fill in Username AND Password fields", "H1Emu - DepotDownloader", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+
+            directory.Text = ContentDownloader.DEFAULT_DOWNLOAD_DIR;
             startDownloadBtn_ClickAsync();
         }
 
         private async Task startDownloadBtn_ClickAsync()
         {
-
             string [] args = argsText.Text.Split(' ');
 
             try { 
@@ -111,7 +121,7 @@ namespace H1DepotDownloader
                 }
             }
 
-            ContentDownloader.Config.InstallDirectory = GetParameter<string>(args, "-dir");
+            ContentDownloader.Config.InstallDirectory = GetParameter<string> (args, "-dir");
 
             ContentDownloader.Config.VerifyAll = HasParameter(args, "-verify-all") || HasParameter(args, "-verify_all") || HasParameter(args, "-validate");
             ContentDownloader.Config.MaxServers = GetParameter<int>(args, "-max-servers", 20);
@@ -363,7 +373,13 @@ namespace H1DepotDownloader
             return list;
         }
 
-    }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            string localVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString().TrimEnd('0').TrimEnd('.');
+            this.Text = $"H1Emu - DepotDownloader - {localVersion}";
 
+            outputLabel.Font = new Font("Roboto", 14);
+        }
+    }
 }
 #endregion
