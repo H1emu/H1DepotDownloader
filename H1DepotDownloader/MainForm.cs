@@ -376,7 +376,7 @@ namespace H1DepotDownloader
         private void MainForm_Load(object sender, EventArgs e)
         {
             string localVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString().TrimEnd('0').TrimEnd('.');
-            this.Text = $"H1Emu - DepotDownloader - {localVersion}";
+            this.Text = $"H1Emu - DepotDownloader - v{localVersion}";
 
             outputLabel.Font = new Font("Roboto", 14);
         }
