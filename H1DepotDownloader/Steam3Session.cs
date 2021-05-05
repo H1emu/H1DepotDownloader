@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+using System.Windows.Forms;
 
 namespace H1DepotDownloader
 {
@@ -627,6 +628,9 @@ namespace H1DepotDownloader
             bool is2FA = loggedOn.Result == EResult.AccountLoginDeniedNeedTwoFactor;
             bool isLoginKey = ContentDownloader.Config.RememberPassword && logonDetails.LoginKey != null && loggedOn.Result == EResult.InvalidPassword;
 
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width / 2;
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height / 2;
+
             if ( isSteamGuard || is2FA || isLoginKey )
             {
                 bExpectingDisconnectRemote = true;
@@ -640,11 +644,11 @@ namespace H1DepotDownloader
                 if ( is2FA )
                 {
                     Console.Write( "Please enter your 2 factor auth code from your authenticator app: " );
-                    logonDetails.TwoFactorCode = Interaction.InputBox("Provide 2 Auth",
-                       "Please enter your 2 factor auth code from your authenticator app",
+                    logonDetails.TwoFactorCode = Interaction.InputBox("Please enter your 2 factor auth code from your authenticator app: ",
+                       "Provide 2 Auth",
                        "",
-                       0,
-                       0);
+                       screenWidth,
+                       screenHeight);
                 }
                 else if ( isLoginKey )
                 {
@@ -667,11 +671,11 @@ namespace H1DepotDownloader
                 else
                 {
                     Console.Write( "Please enter the authentication code sent to your email address: " );
-                    logonDetails.AuthCode = Interaction.InputBox("Provide 2 Auth",
-                       "Please enter your 2 factor auth code from your authenticator app",
+                    logonDetails.AuthCode = Interaction.InputBox("Please enter the authentication code sent to your email address: ",
+                       "Provide 2 Auth",
                        "",
-                       0,
-                       0);
+                       screenWidth,
+                       screenHeight);
                 }
 
                 Console.Write( "Retrying Steam3 connection..." );
