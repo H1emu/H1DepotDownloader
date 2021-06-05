@@ -36,6 +36,7 @@ namespace H1DepotDownloader
         private void startDownloadBtn_Click_1(object sender, EventArgs e)
         {
             if (usernameText.Text == "" || passwordText.Text == "") { MessageBox.Show("Please fill in Username AND Password fields", "H1Emu - DepotDownloader", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            if (!jan2015.Checked && !dec2016.Checked || argsText.Text == "") { MessageBox.Show("Please select a version to download or set custom arguments.", "H1Emu - DepotDownloader", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
 
             directory.Text = ContentDownloader.DEFAULT_DOWNLOAD_DIR;
             startDownloadBtn_ClickAsync();
@@ -379,6 +380,17 @@ namespace H1DepotDownloader
             this.Text = $"H1Emu - DepotDownloader - v{localVersion}";
 
             outputLabel.Font = new Font("Roboto", 14);
+            versionLabel.Font = new Font("Roboto", 14);
+        }
+
+        private void jan2015_CheckedChanged(object sender, EventArgs e)
+        {
+            argsText.Text = "-app 295110 -depot 295111 -manifest 1930886153446950288";
+        }
+
+        private void dec2016_CheckedChanged(object sender, EventArgs e)
+        {
+            argsText.Text = "-app 295110 -depot 295111 -manifest 8395659676467739522";
         }
     }
 }
