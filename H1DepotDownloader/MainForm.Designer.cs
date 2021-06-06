@@ -37,6 +37,9 @@
             this.directory = new MaterialSkin.Controls.MaterialTextBox();
             this.consoleLogs = new System.Windows.Forms.TextBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.jan2015 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.dec2016 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.versionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usernameText
@@ -83,7 +86,7 @@
             this.argsText.Name = "argsText";
             this.argsText.Size = new System.Drawing.Size(402, 126);
             this.argsText.TabIndex = 12;
-            this.argsText.Text = "-app 295110 -depot 295111 -manifest 1930886153446950288";
+            this.argsText.Text = "";
             // 
             // startDownloadBtn
             // 
@@ -107,7 +110,7 @@
             // 
             // outputLabel
             // 
-            this.outputLabel.Location = new System.Drawing.Point(19, 315);
+            this.outputLabel.Location = new System.Drawing.Point(19, 308);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(175, 23);
             this.outputLabel.TabIndex = 14;
@@ -140,12 +143,58 @@
             this.consoleLogs.Size = new System.Drawing.Size(760, 260);
             this.consoleLogs.TabIndex = 17;
             // 
+            // jan2015
+            // 
+            this.jan2015.AutoSize = true;
+            this.jan2015.Depth = 0;
+            this.jan2015.Location = new System.Drawing.Point(476, 301);
+            this.jan2015.Margin = new System.Windows.Forms.Padding(0);
+            this.jan2015.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.jan2015.MouseState = MaterialSkin.MouseState.HOVER;
+            this.jan2015.Name = "jan2015";
+            this.jan2015.Ripple = true;
+            this.jan2015.Size = new System.Drawing.Size(133, 37);
+            this.jan2015.TabIndex = 18;
+            this.jan2015.TabStop = true;
+            this.jan2015.Text = "January 2015";
+            this.jan2015.UseVisualStyleBackColor = true;
+            this.jan2015.CheckedChanged += new System.EventHandler(this.jan2015_CheckedChanged);
+            // 
+            // dec2016
+            // 
+            this.dec2016.AutoSize = true;
+            this.dec2016.Depth = 0;
+            this.dec2016.Location = new System.Drawing.Point(636, 301);
+            this.dec2016.Margin = new System.Windows.Forms.Padding(0);
+            this.dec2016.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.dec2016.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dec2016.Name = "dec2016";
+            this.dec2016.Ripple = true;
+            this.dec2016.Size = new System.Drawing.Size(146, 37);
+            this.dec2016.TabIndex = 19;
+            this.dec2016.TabStop = true;
+            this.dec2016.Text = "December 2016";
+            this.dec2016.UseVisualStyleBackColor = true;
+            this.dec2016.CheckedChanged += new System.EventHandler(this.dec2016_CheckedChanged);
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.Location = new System.Drawing.Point(377, 308);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(100, 23);
+            this.versionLabel.TabIndex = 20;
+            this.versionLabel.Text = "Version:";
+            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(804, 635);
+            this.Controls.Add(this.versionLabel);
+            this.Controls.Add(this.dec2016);
+            this.Controls.Add(this.jan2015);
             this.Controls.Add(this.consoleLogs);
             this.Controls.Add(this.directory);
             this.Controls.Add(this.outputLabel);
@@ -175,6 +224,9 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         public MaterialSkin.Controls.MaterialTextBox directory;
         public MaterialSkin.Controls.MaterialTextBox usernameText;
+        private MaterialSkin.Controls.MaterialRadioButton jan2015;
+        private MaterialSkin.Controls.MaterialRadioButton dec2016;
+        private System.Windows.Forms.Label versionLabel;
     }
 }
 
